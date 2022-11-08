@@ -1,15 +1,15 @@
 import { View } from "react-native";
 
-import InputAssignment from "../InputAssignment";
-import ButtonAddAssignment from "../ButtonAddAssignment";
+import InputTask from "../InputTask";
+import ButtonAddTask from "../ButtonAddTask";
 
 import { styles } from "./styles";
 
 const SearchBar = () => {
   return (
     <View style={ styles.container }>
-      <InputAssignment />
-      <ButtonAddAssignment />
+      <InputTask />
+      <ButtonAddTask />
     </View>
   );
 };

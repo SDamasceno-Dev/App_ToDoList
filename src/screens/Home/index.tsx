@@ -9,7 +9,7 @@ import TaskItem from '../../components/TaskItem/item';
 import { styles } from './styles'
 
 const Home = () => {
-  const [tasksList, setTasksList] = useState([]);
+  const [tasksList, setTasksList] = useState([{teste: 'ok'}]);
 
   return (
     <View style={styles.container}>

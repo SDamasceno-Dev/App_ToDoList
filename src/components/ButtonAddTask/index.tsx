@@ -1,13 +1,13 @@
 import { TouchableOpacity, Image } from "react-native";
 
-import buttonBackground from '../../assets/img/Button.png'
+import plusIcon from '../../assets/img/plus.png';
 
 import { styles } from "./styles";
 
 const ButtonAddTask = () => {
   return (
     <TouchableOpacity style={styles.container}>
-      <Image source={buttonBackground} />
+      <Image source={plusIcon} />
     </TouchableOpacity>
   );
 };

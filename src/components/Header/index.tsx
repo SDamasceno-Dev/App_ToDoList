@@ -1,4 +1,6 @@
-import { View, Text, Image } from "react-native";
+import { View, Image } from "react-native";
+
+import SearchBar from "../SearchBar";
 
 import logoTodo from '../../assets/img/Logo.png'
 
@@ -8,6 +10,7 @@ const Header = () => {
   return (
     <View style={styles.container}>
       <Image source={logoTodo} />
+      <SearchBar />
     </View>
   );
 };

@@ -1,7 +1,7 @@
 import { TextInput } from 'react-native';
 import { styles } from './styles';
 
-const InputAssignment = () => {
+const InputTask = () => {
   return (
     <TextInput 
       style={styles.container} 
@@ -11,4 +11,4 @@ const InputAssignment = () => {
   );
 };
 
-export default InputAssignment;
+export default InputTask;

@@ -4,7 +4,7 @@ import buttonBackground from '../../assets/img/Button.png'
 
 import { styles } from "./styles";
 
-const ButtonAddAssignment = () => {
+const ButtonAddTask = () => {
   return (
     <TouchableOpacity style={styles.container}>
       <Image source={buttonBackground} />
@@ -12,4 +12,4 @@ const ButtonAddAssignment = () => {
   );
 };
 
-export default ButtonAddAssignment;
+export default ButtonAddTask;

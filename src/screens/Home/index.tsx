@@ -40,6 +40,7 @@ const Home = () => {
         }
       ]
     )
+    setTaskDescription('');
   };
 
   const handleTasksDone = (id: string) => {
@@ -51,16 +52,25 @@ const Home = () => {
   };
 
   const handleRemoveTask = (id: string) => {
-    console.info('delete id', id);
+    Alert.alert(
+      `Atenção!`, 
+      `Tem certeza de que deseja remover esta tarefa?`, 
+      [
+        {
+          text: 'Ok', 
+          onPress: () => {
+            setTaskList(taskList.filter(el => el.id !== id));
+            setTasksDone(tasksDone.filter(el => el !== id));
+          }
+        },
+        {
+          text: 'Cancelar', 
+          style: 'cancel'
+        },
+      ]
+    )
   };
 
-  useEffect(() => {
-    setTaskDescription('');
-  }, [taskList])
-
-  useEffect(() => {
-    console.info('tasksDone', tasksDone);
-  }, [tasksDone])
 
   return (
     <View style={styles.container}>

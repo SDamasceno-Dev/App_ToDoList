@@ -13,14 +13,19 @@ type HeaderProps = {
   userInputTask: Dispatch<SetStateAction<string>>;
 };
 
-const Header = ({ inputTaskValue, userAddTask, userInputTask }: HeaderProps) => {
+const Header = (
+  { 
+    inputTaskValue, 
+    userAddTask, 
+    userInputTask, 
+  }: HeaderProps) => {
   return (
     <View style={styles.container}>
       <Image source={logoTodo} />
       <SearchBar 
-        userInputTask={userInputTask} 
-        userAddTask={userAddTask} 
         inputTaskValue={inputTaskValue}
+        userAddTask={userAddTask} 
+        userInputTask={userInputTask} 
       />
     </View>
   );

@@ -5,10 +5,14 @@ import TasksDoneIndicator from "../TasksDoneIndicator";
 
 import { styles } from "./styles";
 
-const StatisticsBar = () => {
+type StatisticsBarProps = {
+  tasksCreated: number;
+};
+
+const StatisticsBar = ({ tasksCreated }: StatisticsBarProps) => {
   return (
     <View style={ styles.container }>
-      <TasksCreatedIndicator />
+      <TasksCreatedIndicator tasksCreated={tasksCreated} />
       <TasksDoneIndicator />
     </View>
   );

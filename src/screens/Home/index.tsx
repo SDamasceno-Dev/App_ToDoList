@@ -33,22 +33,20 @@ const Home = () => {
           id: (Date.now().toString()), 
           task: taskDescription
         }
-      ])
-  };
-
-  useEffect(() => {
+      ]
+    )
     setTaskDescription('');
-  }, [tasksList])
+  };
 
   return (
     <View style={styles.container}>
       <Header 
         inputTaskValue={taskDescription}
         userAddTask={handleAddTask}
-        userInputTask={setTaskDescription} 
+        userInputTask={setTaskDescription}
       />
       <View style={styles.content}>
-        <StatisticsBar />
+        <StatisticsBar tasksCreated={tasksList.length} />
         <FlatList 
           data={tasksList} 
           ListEmptyComponent={ListEmpty}

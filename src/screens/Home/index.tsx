@@ -13,44 +13,52 @@ type TaskListProps = {
   task: string;
 }
 
+type TasksDoneProps = {
+  id: string;
+};
+
 const Home = () => {
-  const [tasksList, setTasksList] = useState<TaskListProps[]>([]);
+  const [taskList, setTaskList] = useState<TaskListProps[]>([]);
   const [taskDescription, setTaskDescription] = useState('');
+  const [tasksDone, setTasksDone] = useState<TasksDoneProps[]>([]);
 
   const handleAddTask = (): void => {
+    // Check if task description is inserted
     if (taskDescription === '') {
       Alert.alert(
         'Ops...', 
-        'É necessário digitar o conteúdo da tarefa para poder adicionar'
+        'É necessário digitar a descrição da tarefa para poder adicionar.'
       );
       return;
     }
 
-    setTasksList(
+    // Add task description on TaskList
+    setTaskList(
       prevState => [
         ...prevState, 
         {
           id: (Date.now().toString()), 
           task: taskDescription
         }
-      ])
-  };
-
-  useEffect(() => {
+      ]
+    )
     setTaskDescription('');
-  }, [tasksList])
+  };
 
   return (
     <View style={styles.container}>
       <Header 
-        inputTaskValue={taskDescription}
+        taskInputText={taskDescription}
         userAddTask={handleAddTask}
-        userInputTask={setTaskDescription} 
+        userInputTask={setTaskDescription}
       />
       <View style={styles.content}>
-        <StatisticsBar />
+        <StatisticsBar 
+          tasksCreated={taskList.length} 
+          tasksDone={tasksDone.length} 
+        />
         <FlatList 
-          data={tasksList} 
+          data={taskList} 
           ListEmptyComponent={ListEmpty}
           keyExtractor={item => item.id}
           renderItem={TaskItem}

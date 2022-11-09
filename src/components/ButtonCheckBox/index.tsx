@@ -17,7 +17,6 @@ const ButtonCheckBox = () => {
       style={styles.container} 
       onPress={() => {
         setCheckSelected(!checkSelected);
-        onClick();
       }}
     >
       <View style={checkSelected ? styles.checkBoxSelected : styles.checkBoxUnselected}>

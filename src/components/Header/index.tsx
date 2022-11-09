@@ -8,19 +8,24 @@ import logoTodo from '../../assets/img/Logo.png'
 import { styles } from './styles';
 
 type HeaderProps = {
-  inputTaskValue: string;
+  taskInputText: string;
   userAddTask: () => void;
   userInputTask: Dispatch<SetStateAction<string>>;
 };
 
-const Header = ({ inputTaskValue, userAddTask, userInputTask }: HeaderProps) => {
+const Header = (
+  { 
+    taskInputText, 
+    userAddTask, 
+    userInputTask, 
+  }: HeaderProps) => {
   return (
     <View style={styles.container}>
       <Image source={logoTodo} />
       <SearchBar 
-        userInputTask={userInputTask} 
+        taskInputText={taskInputText}
         userAddTask={userAddTask} 
-        inputTaskValue={inputTaskValue}
+        userInputTask={userInputTask} 
       />
     </View>
   );

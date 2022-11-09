@@ -7,16 +7,16 @@ import ButtonAddTask from "../ButtonAddTask";
 import { styles } from "./styles";
 
 type SearchBarProps = {
-  inputTaskValue: string;
+  taskInputText: string;
   userAddTask: () => void;
   userInputTask: Dispatch<SetStateAction<string>>;
 };
 
 
-const SearchBar = ({ inputTaskValue, userInputTask, userAddTask }: SearchBarProps) => {
+const SearchBar = ({ taskInputText, userInputTask, userAddTask }: SearchBarProps) => {
   return (
     <View style={ styles.container }>
-      <InputTask userInputTask={userInputTask} value={inputTaskValue} />
+      <InputTask userInputTask={userInputTask} value={taskInputText} />
       <ButtonAddTask userAddTask={userAddTask} />
     </View>
   );

@@ -2,12 +2,16 @@ import { View, Text } from "react-native";
 
 import { styles } from "./styles";
 
-const TasksDoneIndicator = () => {
+type TasksDoneIndicatorProps = {
+  tasksDone: number;
+};
+
+const TasksDoneIndicator = ({ tasksDone }: TasksDoneIndicatorProps) => {
   return (
     <View style={ styles.container }>
       <Text style={ styles.label }>Concluídas</Text>
       <View style={ styles.dataContainer }>
-        <Text style={styles.dataText}>0</Text>
+        <Text style={styles.dataText}>{tasksDone}</Text>
       </View>
     </View>
   );

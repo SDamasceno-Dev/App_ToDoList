@@ -7,12 +7,14 @@ import { styles } from "./styles";
 
 type TaskItemProps = {
   item: {
+    id: string;
     task: string;
   };
+  removeTask: (id: string) => void;
 };
 
-const TaskItem = ({ item }: TaskItemProps) => {
-  const { task } = item;
+const TaskItem = ({ item, removeTask }: TaskItemProps) => {
+  const { id, task } = item;
   
   return (
     <View style={ styles.container }>
@@ -20,7 +22,7 @@ const TaskItem = ({ item }: TaskItemProps) => {
       <Text style={ styles.descriptionText } numberOfLines={2}>
         {task}
       </Text>
-      <ButtonDeleteTask />
+      <ButtonDeleteTask id={id} removeTask={removeTask} />
     </View>
   );
 };

@@ -42,8 +42,15 @@ const Home = () => {
         }
       ]
     )
-    setTaskDescription('');
   };
+
+  const handleRemoveTask = (id: string) => {
+    console.info('id', id);
+  };
+
+  useEffect(() => {
+    setTaskDescription('');
+  }, [taskList])
 
   return (
     <View style={styles.container}>
@@ -61,7 +68,9 @@ const Home = () => {
           data={taskList} 
           ListEmptyComponent={ListEmpty}
           keyExtractor={item => item.id}
-          renderItem={TaskItem}
+          renderItem={({item}) => (
+            <TaskItem removeTask={handleRemoveTask} item={item} />
+          )}
           style={styles.taskListContainer}
         />
       </View>      

@@ -4,9 +4,14 @@ import trashCanIcon from '../../assets/img/TrashCan.png'
 
 import { styles } from "./styles";
 
-const ButtonDeleteTask = () => {
+type ButtonDeleteTaskProps = {
+  id: string;
+  removeTask: (id: string) => void;
+};
+
+const ButtonDeleteTask = ({id, removeTask}: ButtonDeleteTaskProps) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={() => {removeTask(id)}}>
       <Image source={trashCanIcon} />
     </TouchableOpacity>
   );

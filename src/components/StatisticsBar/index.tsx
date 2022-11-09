@@ -7,13 +7,14 @@ import { styles } from "./styles";
 
 type StatisticsBarProps = {
   tasksCreated: number;
+  tasksDone: number;
 };
 
-const StatisticsBar = ({ tasksCreated }: StatisticsBarProps) => {
+const StatisticsBar = ({ tasksCreated, tasksDone }: StatisticsBarProps) => {
   return (
     <View style={ styles.container }>
       <TasksCreatedIndicator tasksCreated={tasksCreated} />
-      <TasksDoneIndicator />
+      <TasksDoneIndicator tasksDone={tasksDone} />
     </View>
   );
 };

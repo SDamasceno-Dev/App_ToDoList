@@ -5,11 +5,21 @@ import checkIcon from '../../assets/img/CheckIcon.png'
 
 import { styles } from "./styles";
 
+type ButtonCheckProps = {
+  onClick: () => void;
+}
+
 const ButtonCheckBox = () => {
   const [checkSelected, setCheckSelected] = useState(false);
 
   return (
-    <TouchableOpacity style={styles.container} onPress={() => setCheckSelected(!checkSelected)}>
+    <TouchableOpacity 
+      style={styles.container} 
+      onPress={() => {
+        setCheckSelected(!checkSelected);
+        onClick();
+      }}
+    >
       <View style={checkSelected ? styles.checkBoxSelected : styles.checkBoxUnselected}>
         {checkSelected && (<Image source={checkIcon} />) }
       </View>

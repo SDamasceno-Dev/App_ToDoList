@@ -5,7 +5,8 @@ import ButtonDeleteTask from "../ButtonDeleteTask";
 
 import { styles } from "./styles";
 
-const TaskItem = () => {
+const TaskItem = (props: any) => {
+  
   return (
     <View style={ styles.container }>
       <ButtonCheckBox />

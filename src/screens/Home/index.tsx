@@ -37,14 +37,15 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.info('taskList', tasksList)
+    setTaskDescription('');
   }, [tasksList])
 
   return (
     <View style={styles.container}>
       <Header 
+        inputTaskValue={taskDescription}
+        userAddTask={handleAddTask}
         userInputTask={setTaskDescription} 
-        userAddTask={handleAddTask} 
       />
       <View style={styles.content}>
         <StatisticsBar />

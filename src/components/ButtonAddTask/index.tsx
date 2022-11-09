@@ -4,9 +4,13 @@ import plusIcon from '../../assets/img/plus.png';
 
 import { styles } from "./styles";
 
-const ButtonAddTask = () => {
+type ButtonAddTaskProps = {
+  userAddTask: () => void;
+}
+
+const ButtonAddTask = ({ userAddTask }: ButtonAddTaskProps) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity style={styles.container} onPress={userAddTask}>
       <Image source={plusIcon} />
     </TouchableOpacity>
   );

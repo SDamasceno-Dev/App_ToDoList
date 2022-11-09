@@ -48,7 +48,7 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <Header 
-        inputTaskValue={taskDescription}
+        taskInputText={taskDescription}
         userAddTask={handleAddTask}
         userInputTask={setTaskDescription}
       />

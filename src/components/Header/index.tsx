@@ -8,14 +8,14 @@ import logoTodo from '../../assets/img/Logo.png'
 import { styles } from './styles';
 
 type HeaderProps = {
-  inputTaskValue: string;
+  taskInputText: string;
   userAddTask: () => void;
   userInputTask: Dispatch<SetStateAction<string>>;
 };
 
 const Header = (
   { 
-    inputTaskValue, 
+    taskInputText, 
     userAddTask, 
     userInputTask, 
   }: HeaderProps) => {
@@ -23,7 +23,7 @@ const Header = (
     <View style={styles.container}>
       <Image source={logoTodo} />
       <SearchBar 
-        inputTaskValue={inputTaskValue}
+        taskInputText={taskInputText}
         userAddTask={userAddTask} 
         userInputTask={userInputTask} 
       />

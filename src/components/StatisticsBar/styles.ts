@@ -7,9 +7,5 @@ export const styles = StyleSheet.create({
     height: 39,
     marginTop: 32,
     justifyContent: 'space-between',
-    borderBottomColor: '#333',
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: 'transparent'
   }
 });

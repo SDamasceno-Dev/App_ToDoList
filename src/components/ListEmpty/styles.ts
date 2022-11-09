@@ -9,7 +9,8 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
   },
   imageContainer: {
-    marginVertical: 16,
+    marginTop: 48,
+    marginBottom: 16,
   },
   description: {
     fontSize: 14,

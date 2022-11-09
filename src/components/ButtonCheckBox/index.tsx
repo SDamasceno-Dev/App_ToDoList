@@ -1,22 +1,26 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { TouchableOpacity,  View, Image } from "react-native";
 
 import checkIcon from '../../assets/img/CheckIcon.png'
 
 import { styles } from "./styles";
 
-type ButtonCheckProps = {
-  onClick: () => void;
+type ButtonCheckBoxProps = {
+  id: string;
+  checkSelected: boolean;
+  handleTasksDone: (id: string) => void;
+  setCheckSelected: Dispatch<SetStateAction<boolean>>;
 }
 
-const ButtonCheckBox = () => {
-  const [checkSelected, setCheckSelected] = useState(false);
-
+const ButtonCheckBox = (
+  { handleTasksDone, id, setCheckSelected, checkSelected }: ButtonCheckBoxProps
+) => {
   return (
     <TouchableOpacity 
       style={styles.container} 
       onPress={() => {
         setCheckSelected(!checkSelected);
+        handleTasksDone(id);
       }}
     >
       <View style={checkSelected ? styles.checkBoxSelected : styles.checkBoxUnselected}>

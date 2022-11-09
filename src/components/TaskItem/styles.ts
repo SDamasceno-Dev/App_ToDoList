@@ -14,9 +14,15 @@ export const styles = StyleSheet.create({
     backgroundColor: '#262626',
     marginVertical: 4,
   },
-  descriptionText: {
+  descriptionTextActive: {
     flex: 1,
     fontSize: 13,
     color: '#F2F2F2',
+  },
+  descriptionTextInactive: {
+    flex: 1,
+    fontSize: 13,
+    color: '#808080',
+    textDecorationLine: 'line-through'
   }
 });

@@ -1,3 +1,4 @@
+import { useState, Dispatch, SetStateAction } from "react";
 import { Text, View } from "react-native";
 
 import ButtonCheckBox from "../ButtonCheckBox";
@@ -6,6 +7,7 @@ import ButtonDeleteTask from "../ButtonDeleteTask";
 import { styles } from "./styles";
 
 type TaskItemProps = {
+  handleTasksDone: (id: string) => void;
   item: {
     id: string;
     task: string;
@@ -13,13 +15,26 @@ type TaskItemProps = {
   removeTask: (id: string) => void;
 };
 
-const TaskItem = ({ item, removeTask }: TaskItemProps) => {
+const TaskItem = ({ handleTasksDone, item, removeTask }: TaskItemProps) => {
+  const [checkSelected, setCheckSelected] = useState(false);
   const { id, task } = item;
   
   return (
     <View style={ styles.container }>
-      <ButtonCheckBox />
-      <Text style={ styles.descriptionText } numberOfLines={2}>
+      <ButtonCheckBox 
+        checkSelected={checkSelected}
+        handleTasksDone={handleTasksDone}
+        id={item?.id}
+        setCheckSelected={setCheckSelected} 
+      />
+      <Text 
+        style={ 
+          checkSelected 
+          ? styles.descriptionTextInactive 
+          : styles.descriptionTextActive 
+        } 
+        numberOfLines={2}
+      >
         {task}
       </Text>
       <ButtonDeleteTask id={id} removeTask={removeTask} />

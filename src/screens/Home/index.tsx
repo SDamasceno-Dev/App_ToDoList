@@ -13,22 +13,20 @@ type TaskListProps = {
   task: string;
 }
 
-type TasksDoneProps = {
-  id: string;
-};
-
 const Home = () => {
   const [taskList, setTaskList] = useState<TaskListProps[]>([]);
   const [taskDescription, setTaskDescription] = useState('');
-  const [tasksDone, setTasksDone] = useState<TasksDoneProps[]>([]);
+  const [tasksDone, setTasksDone] = useState<string[]>([]);
+
 
   const handleAddTask = (): void => {
     // Check if task description is inserted
-    if (taskDescription === '') {
+    if (taskDescription.trim( ) === '') {
       Alert.alert(
         'Ops...', 
         'É necessário digitar a descrição da tarefa para poder adicionar.'
       );
+      setTaskDescription('');
       return;
     }
 
@@ -44,13 +42,25 @@ const Home = () => {
     )
   };
 
+  const handleTasksDone = (id: string) => {
+    if (tasksDone.findIndex(el => el === id) === -1) {
+      setTasksDone(prevState => [...prevState, id]);
+    } else {
+      setTasksDone(tasksDone.filter(el => el !== id))
+    }
+  };
+
   const handleRemoveTask = (id: string) => {
-    console.info('id', id);
+    console.info('delete id', id);
   };
 
   useEffect(() => {
     setTaskDescription('');
   }, [taskList])
+
+  useEffect(() => {
+    console.info('tasksDone', tasksDone);
+  }, [tasksDone])
 
   return (
     <View style={styles.container}>
@@ -69,7 +79,11 @@ const Home = () => {
           ListEmptyComponent={ListEmpty}
           keyExtractor={item => item.id}
           renderItem={({item}) => (
-            <TaskItem removeTask={handleRemoveTask} item={item} />
+            <TaskItem 
+              handleTasksDone={handleTasksDone} 
+              item={item} 
+              removeTask={handleRemoveTask} 
+            />
           )}
           style={styles.taskListContainer}
         />

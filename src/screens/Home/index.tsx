@@ -95,6 +95,7 @@ const Home = () => {
               removeTask={handleRemoveTask} 
             />
           )}
+          showsVerticalScrollIndicator={false}
           style={styles.taskListContainer}
         />
       </View>      

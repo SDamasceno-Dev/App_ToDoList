@@ -25,19 +25,19 @@
   <a href="#status">Status do Projeto</a> •
   <a href="#instalacao">Instalação</a> • 
   <a href="#como-usar">Como usar</a> • 
-  <a href="#tecnologias">Tecnologias</a> • 
+  <a href="#tecnologias">Tecnologias Usadas</a> • 
   <a href="#licenca">Licença</a> • 
-  <a href="#autor">Autor</a> • 
+  <a href="#autor">Sobre o Autor</a> • 
 </p>
 
 <br/>
 
-## <a name="sobre"></a>Sobre o App ToDo
+## <a id="sobre"></a>Sobre o App ToDo
 O aplicativo ToDo é o aplicativo perfeito para resolver os seus problemas e esquecimentos do que precisa fazer durante o dia. De maneira simples, rápida e prática, você consegue inserir as atividade que precisam ser realizadas e de maneira bem simples, você consegue gerenciar melhor todas elas e conseguir verificar quais tarefas já foram concluídas e quantas ainda estão em aberto.
 
 <br />
 
-## <a name="status"></a>Status do Projeto
+## <a id="status"></a>Status do Projeto
 - 🏁 Concluído:
   - Projeto base todo finalizado e funcional;
 
@@ -52,7 +52,7 @@ O aplicativo ToDo é o aplicativo perfeito para resolver os seus problemas e esq
 
 <br />
 
-## <a nome="instalacao"></a>Instalação
+## <a id="instalacao"></a>Instalação
 Atualmente o aplicativo está disponível para instalação apenas para Android, por meio do arquivo .APK.
 Caso o interesse seja compilar o arquivo em seu ambiente de desenvolvimento, é necessário contemplar alguns pré-requisitos já configurados:
 
@@ -76,4 +76,22 @@ npx expo start
 
 <br />
 
-## <a name="como-usar"></a>Como Usar
+## <a id="como-usar"></a>Como Usar
+
+<br />
+
+## <a id="tecnologias"></a>Tecnologias Usadas
+
+
+<br />
+
+## <a id="licença"></a>Licença
+
+
+<br />
+
+## <a id="autor"></a>Sobre o Autor
+
+
+<br />
+

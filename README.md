@@ -82,7 +82,9 @@ O funcionamento do aplicativo é relativamente simples. Como o objetivo do aplic
 - Inserir a descrição da tarefa a ser cadastrada, repetindo esse procedimento com todas as tarefas que tenha interessem em adicionar;
 - Uma vez que a tarefa esteja concluída, basta clicar no bolinha da tarefa correspondente para que sinalize a conclusão da mesma;
 - Caso queira remover a tarefa cadastrada, basta clicar na lixeira correspondente à tarefa;
-Você pode acompanhar todos esses passos na animação exibida abaixo.
+Você pode acompanhar todos esses passos na animação exibida abaixo:
+
+https://user-images.githubusercontent.com/58818002/201820366-b10cafcc-8e31-43dc-9231-97b9ebe46f3d.mov
 
 
 <br />

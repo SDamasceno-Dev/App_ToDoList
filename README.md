@@ -15,7 +15,7 @@
 </br>
 
 # App ToDo
-> 📝 Seu aplicativo essencial para a organização das suas tarefas.
+> Seu aplicativo essencial para a organização das suas tarefas.
 
 <br />
 
@@ -23,6 +23,7 @@
 <p align='center'>
   <a href="#sobre">Sobre o App ToDo</a> •
   <a href="#status">Status do Projeto</a> •
+  <a href="#roadmap">RoadMap</a> •
   <a href="#instalacao">Instalação</a> • 
   <a href="#como-usar">Como usar</a> • 
   <a href="#tecnologias">Tecnologias Usadas</a> • 
@@ -32,18 +33,18 @@
 
 <br/>
 
-## <a id="sobre"></a>Sobre o App ToDo
+## 📝 <a id="sobre"></a>Sobre o App ToDo
 O aplicativo ToDo é o aplicativo perfeito para resolver os seus problemas e esquecimentos do que precisa fazer durante o dia. De maneira simples, rápida e prática, você consegue inserir as atividade que precisam ser realizadas e de maneira bem simples, você consegue gerenciar melhor todas elas e conseguir verificar quais tarefas já foram concluídas e quantas ainda estão em aberto.
 
 <br />
 
-## <a id="status"></a>Status do Projeto
+## 📈 <a id="status"></a>Status do Projeto
 - 🏁 Concluído:
   - Projeto base todo finalizado e funcional;
 
 <br />
 
-- 🚧 A ser implementado:
+## 🧭 <a id="roadmap"></a>Roadmap
   - Inserir ícone e tela de Splash;
   - Possibilitar a guarda dos registros, mesmo que o app seja encerrado;
   - Implementar o cadastro de perfil com autenticação;
@@ -52,7 +53,7 @@ O aplicativo ToDo é o aplicativo perfeito para resolver os seus problemas e esq
 
 <br />
 
-## <a id="instalacao"></a>Instalação
+## ⚙️ <a id="instalacao"></a>Instalação
 Atualmente o aplicativo está disponível para instalação apenas para Android, por meio do arquivo .APK.
 Caso o interesse seja compilar o arquivo em seu ambiente de desenvolvimento, é necessário contemplar alguns pré-requisitos já configurados:
 
@@ -76,7 +77,7 @@ npx expo start
 
 <br />
 
-## <a id="como-usar"></a>Como Usar
+## 🤔 <a id="como-usar"></a>Como Usar
 
 O funcionamento do aplicativo é relativamente simples. Como o objetivo do aplicativo é te auxiliar no gerenciamento da suas tarefas, as etapas básicas para o uso do app são:
 - Inserir a descrição da tarefa a ser cadastrada, repetindo esse procedimento com todas as tarefas que tenha interessem em adicionar;
@@ -89,18 +90,21 @@ https://user-images.githubusercontent.com/58818002/201820366-b10cafcc-8e31-43dc-
 
 <br />
 
-## <a id="tecnologias"></a>Tecnologias Usadas
-
-
-<br />
-
-## <a id="licença"></a>Licença
-
-
-<br />
-
-## <a id="autor"></a>Sobre o Autor
-
+## 🤖 <a id="tecnologias"></a>Tecnologias Usadas
+- [expo](https://docs.expo.dev): ~46.0.16
+- [expo-dev-client](https://docs.expo.dev): ~1.3.1
+- [expo-status-bar](https://docs.expo.dev): ~1.4.0
+- [react](https://pt-br.reactjs.org): 18.0.0
+- [react-native](https://reactnative.dev/docs/0.69/getting-started): 0.69.6
 
 <br />
 
+## 📌 <a id="licença"></a>Licença
+<a href="https://github.com/SDamasceno-Dev/todolist/blob/main/LICENSE.MD">
+    <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=4EA8DE&style=plastic">
+  </a>
+
+<br />
+
+## 👨🏻‍💻 <a id="autor"></a>Sobre o Autor
+[<img src="https://avatars.githubusercontent.com/u/58818002?v=4" width=115><br><sub>Sandro Damasceno</sub>](https://github.com/SDamasceno-Dev)

@@ -72,11 +72,18 @@ yarn
 npx expo start
 ```
 4. O Expo irá solicitar a Escolha de onde deseja executar o App (simulador ou dispositivo físico);
-5. Após a escolha do local de eecução, basta fazer uso do App;
+5. Após a escolha do local de execução, basta utilizar o App;
 
 <br />
 
 ## <a id="como-usar"></a>Como Usar
+
+O funcionamento do aplicativo é relativamente simples. Como o objetivo do aplicativo é te auxiliar no gerenciamento da suas tarefas, as etapas básicas para o uso do app são:
+- Inserir a descrição da tarefa a ser cadastrada, repetindo esse procedimento com todas as tarefas que tenha interessem em adicionar;
+- Uma vez que a tarefa esteja concluída, basta clicar no bolinha da tarefa correspondente para que sinalize a conclusão da mesma;
+- Caso queira remover a tarefa cadastrada, basta clicar na lixeira correspondente à tarefa;
+Você pode acompanhar todos esses passos na animação exibida abaixo.
+
 
 <br />
 

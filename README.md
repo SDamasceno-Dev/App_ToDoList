@@ -50,6 +50,7 @@ O aplicativo ToDo é o aplicativo perfeito para resolver os seus problemas e esq
   - Implementar o cadastro de perfil com autenticação;
   - Disponibilizar o backup dos dados em nuvem;
   - Inserir uma área de perfil do usuário no App;
+  - Inserir uma tradução do App para o inglês;
 
 <br />
 
